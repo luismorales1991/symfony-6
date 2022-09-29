@@ -1,0 +1,9 @@
+parameters:
+    cache_adapter: 'cache.adapter.filesystem'
+framework:
+    cache:
+        app: '%cache_adapter%'
+when@dev:
+    framework:
+        cache:
+            app: cache.adapter.array
